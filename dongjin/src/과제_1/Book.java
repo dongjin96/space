@@ -1,6 +1,6 @@
 package 과제_1;
 
-import dongjin.BookAplication;
+
 
 public class Book {
 
@@ -31,13 +31,14 @@ public class Book {
 		boolean check=bookcheck(b_ISBN);
 		if (check) {
 			System.out.println("동일한 도서가 존재합니다");
+			return false;
 		}
 		System.out.println("책이름 입력 :");String b_name =BookAplication.scanner.next();
 		
 		Book book = new Book(b_ISBN, b_name, true, null);
 		for (int i = 0; i < BookAplication.book.length; i++) {
 			if (BookAplication.book[i]==null) {
-				//BookAplication.book[i]=book;  /// 이부분 이 오류
+				BookAplication.book[i]=book;  /// 이부분 이 오류
 				return true;
 			}
 		}
@@ -57,15 +58,17 @@ public class Book {
 		return false;
 	}
 	//도서목록
-	public static void book_list() {
+	public static  void book_list() { // static 을쓰면 BOOkAplication 
 		System.out.println("============도서 목록===============");
 				System.out.println("도서이름 도서번호 대여여부 대서회원");
 				for (int i = 0; i < BookAplication.book.length; i++) {
-					if (BookAplication.book[i]==null) {
-						System.out.println(BookAplication.book[i].getB_name()+BookAplication.book[i].isB_rental()+BookAplication.book[i].getM_id());
+					if (BookAplication.book[i]==null) return; 
+					Book book = BookAplication.book[i];
+					System.out.println( book.getB_ISBN()+book.getB_name()
+					+book.isB_rental()+book.m_id );
 						
-					}
-					 return;
+					
+					 
 				}
 	}
 	

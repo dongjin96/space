@@ -93,10 +93,10 @@ public class BookAplication {
 			  System.out.println("1.책등록하기 2. 등록확인3.로그아웃 :");int ch = scanner.nextInt();
 			  
 			  if (ch == 1) {
-		         과제_1.Book.book_add();
+		         Book.book_add();
 		         }
 		         if (ch == 2) {
-		            과제_1.Book.book_list();
+		          Book.book_list();
 		         }
 		         if (ch == 3) {
 		            System.out.println(" [ 알림 ] : 로그아웃 되었습니다 ");
