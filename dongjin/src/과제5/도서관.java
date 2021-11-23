@@ -15,16 +15,16 @@ public class 도서관 {
 			System.out.println("=====================도서검색프로그램================");
 			System.out.println("1. 책검색 2. 책수정>>>>>:"); 
 			byte[] be = new byte[100]; // 100 자 사용할수있게 인덱스 설정
-			int count = System.in.read(be);  // 입력받은 be를 count로 저장
+			int count = System.in.read(be);  // 입력받은 be를 count로 저장// 숫자로 count저장
 			
-			String ch = new String(be,0,count-2);	//be배열에 0 번쨰부터 -2함  -2는  개행,\t 값 삭제 하기위해서
+			String ch = new String(be,0,count-2);	//be배열에 0 번쨰부터 -2함  -2는  개행,\t 값 삭제 하기위해서    // 문자열로변환
 			
 			if (ch.equals("1")) { // 선택값이 1과 동일하면
 				System.out.println("=============도서검색============");
 				System.out.println("책검색 :");
 				
 				count= System.in.read(be);  // 읽어온정보를 count에 저장
-				String book = new String(be,0,count-2); //be배열에 0 번쨰부터 -2함 문자로 전환
+				String book = new String(be,0,count-2); //be배열에 0 번쨰부터 -2함 문자로 전환 // 문자열로변환
 				
 				for (int i = 0; i < 도서목록.length; i++) { // for문돌려서 검색값과 도서목록[i]에 저장된 책이름이같으면보여줌 
 					if (도서목록[i].equals(book)) {
@@ -36,7 +36,7 @@ public class 도서관 {
 					}
 				}
 				
-			}
+			}//if (ch==1)e
 			if(ch.equals("2")){
 				System.out.println("=============도서명 수정==================");
 				System.out.println("도서명 검색하기 :");
@@ -44,13 +44,13 @@ public class 도서관 {
 					System.out.println(i+"  "+도서목록[i]); // i를 사용하여 앞에  번호를 매긴다
 				}
 				
-				System.out.println("도서선택 :"); 
+				System.out.println("도서선택 :"); // 검색을받는다
 				int count2=System.in.read(be);
 				String book= new String(be,0,count2-2);
 				
 				System.out.println("도서 수정명 :");
-				int count3=System.in.read(be);
-				String newbook= new String(be,0,count3-2); // 새로 수정한 도서명을 new book으로 저장한다
+				int count3=System.in.read(be); // 입력받은 받은 바이트를 숫자로 저장
+				String newbook= new String(be,0,count3-2); // 새로 수정한 도서명을 new book으로 저장한다  // 문자열로바꾼다
 				
 				for (int i = 0; i < 도서목록.length; i++) {
 					if (i==count2) {	// for문을돌려서 도서목록 i번째 인덱스와 선택한 도서 가 같으면
@@ -60,11 +60,11 @@ public class 도서관 {
 					}
 				}
 					
-				}
+				}//if (ch==2)e
 				
 				
-			}
-		}
+			}//while e
+		}//m e
 		
 		
 	
