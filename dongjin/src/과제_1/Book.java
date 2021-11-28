@@ -60,12 +60,12 @@ public class Book {
 	//도서목록
 	public static  void book_list() { // static 을쓰면 BOOkAplication 
 		System.out.println("============도서 목록===============");
-				System.out.println("도서이름 도서번호 대여여부 대서회원");
+				System.out.println("도서이름 \t 도서번호 \t대여여부 \t대서회원");
 				for (int i = 0; i < BookAplication.book.length; i++) {
 					if (BookAplication.book[i]==null) return; 
 					Book book = BookAplication.book[i];
-					System.out.println( book.getB_ISBN()+book.getB_name()
-					+book.isB_rental()+book.m_id );
+					System.out.println( book.getB_ISBN()+"\t"+book.getB_name()+"\t"
+					+book.isB_rental()+"\t"+book.m_id );
 						
 					
 					 
