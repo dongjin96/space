@@ -28,6 +28,18 @@ public class file {
 			fileOutputStream.write( 문자열.getBytes() ); //write(바이트형 ): 해당 파일에 쓰기
 			
 			
+			
+			
+			Scanner scanner = new Scanner(System.in);
+			while(true) {
+				System.out.println("메모장에 입력할 데이터: ");
+				String outstr = scanner.next();
+				outstr = outstr +"\n";
+				fileOutputStream.write(outstr.getBytes());
+				
+				
+				
+			
 			//fileINput stream: 파일 입력 스트림
 			// FileInputStream 객체명 = new FileInputStream("파일경로/파일명.확장자");
 			FileInputStream fileInputStream=
@@ -39,13 +51,7 @@ public class file {
 			System.out.println("현재 파일의 내용은 :"+strread);
 			
 			
-			Scanner scanner = new Scanner(System.in);
-			while(true) {
-				System.out.println("메모장에 입력할 데이터: ");
-				String outstr = scanner.next();
-				outstr = outstr +"\n";
-				fileOutputStream.write(outstr.getBytes());
-				
+		
 			}
 			
 		}
