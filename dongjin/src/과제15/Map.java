@@ -16,5 +16,8 @@ public class Map {
         System.out.println(map.containsKey("people")); // 사람을 입력하자 ture가뜸
         System.out.println(map.remove("people")); // people 이 사라졌으니 사람만 나온다
         System.out.println(map.size());// 하나가 삭제되었으므로 2개의 값만뜬다
+    
     }
-    }
+}	/*Map 컬렉션은 키와 값으로 구성된 객체를 저장하는 구조를 가지고 있다 
+		 * 키는 중복으로 저장할수있다 키에 값이들어오면 기존값은 없어지고 새로운 값이 들어온다 하지만 값은중복저장을할수없다*/
+		 
